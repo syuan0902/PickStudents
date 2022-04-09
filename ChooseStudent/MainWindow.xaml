@@ -1,0 +1,28 @@
+﻿<Window x:Class="ChooseStudent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChooseStudent"
+        mc:Ignorable="d"
+        Title="抽學生號碼" Height="450" Width="800" FontFamily="Arial Black" FontSize="36">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+            <Label Content="要抽出幾個學生？" FontSize="36" FontFamily="Arial Black"/>
+            <Slider x:Name="numberOfStudent" Foreground="Black" Minimum="1" TickPlacement="BottomRight" AutoToolTipPlacement="TopLeft" IsSnapToTickEnabled="True"/>
+        </StackPanel>
+        <Button Content="開抽!!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="48" Background="#FFDCFCFF" FontFamily="Arial Black" Width="200" Height="70" BorderBrush="#FF242B5D" Click="Button_Click"/>
+        <ListBox x:Name="listOfStudents" Grid.Column="1" Background="#FFFFFBA7" Grid.RowSpan="2" Margin="20" BorderBrush="#FF242B5D"/>
+
+    </Grid>
+</Window>
